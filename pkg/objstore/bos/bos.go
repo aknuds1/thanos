@@ -175,6 +175,12 @@ func (b *Bucket) Upload(_ context.Context, name string, r io.Reader) error {
 	return nil
 }
 
+// Move the object at path src to path dst.
+func (b *Bucket) Move(ctx context.Context, src, dst string) error {
+	// TODO
+	return nil
+}
+
 // Iter calls f for each entry in the given directory (not recursive). The argument to f is the full
 // object name including the prefix of the inspected directory.
 func (b *Bucket) Iter(ctx context.Context, dir string, f func(string) error, opt ...objstore.IterOption) error {

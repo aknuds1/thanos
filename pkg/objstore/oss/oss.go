@@ -298,6 +298,12 @@ func NewTestBucketFromConfig(t testing.TB, c Config, reuseBucket bool) (objstore
 	}, nil
 }
 
+// Move the object at path src to path dst.
+func (b *Bucket) Move(ctx context.Context, src, dst string) error {
+	// TODO
+	return nil
+}
+
 func (b *Bucket) Close() error { return nil }
 
 func (b *Bucket) setRange(start, end int64, name string) (alioss.Option, error) {
